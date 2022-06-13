@@ -5,10 +5,13 @@ mutagen.yml.lock
 /mariadb-host/
 /mariadb-init/
 node_modules
-vendor
 .env.bak
 .gitignore.bak
 
+web/modules/contrib
+web/themes/contrib
+
+web/core
 web/.csslintrc
 web/.eslintignore
 web/.eslintrc.json
