@@ -5,3 +5,6 @@ mutagen.yml.lock
 /mariadb-host/
 /mariadb-init/
 node_modules
+vendor
+.env.bak
+.gitignore.bak

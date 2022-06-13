@@ -2,4 +2,6 @@
 mutagen.yml.lock
 .vscode
 /vendor/
+/mariadb-host/
+/mariadb-init/
 node_modules
