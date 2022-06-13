@@ -1,0 +1,11 @@
+bs_carousel:
+  label: 'BS carousel'
+  path: layouts/bs_donation-slider
+  template: layout--bs-donation-slider
+  category: 'WW Bootstrap4'
+  default_region: content
+  icon_map:
+    - [content]
+  regions:
+    content:
+      label: Content

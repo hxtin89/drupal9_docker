@@ -11,6 +11,10 @@ node_modules
 web/modules/contrib
 web/themes/contrib
 
+# Ignore configuration files that may contain sensitive information.
+# sites/*/settings*.php
+# sites/*/services*.yml
+
 web/core
 web/.csslintrc
 web/.eslintignore

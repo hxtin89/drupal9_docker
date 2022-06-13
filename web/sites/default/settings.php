@@ -766,9 +766,9 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  * Keep this code block at the end of this file to take full effect.
  */
 #
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
 $databases['default']['default'] = [
     'host' => 'mariadb',
     'database' => 'drupal',
@@ -778,8 +778,6 @@ $databases['default']['default'] = [
     'prefix' => '',
 ];
 
-$settings['config_sync_directory'] = '/mnt/files/config/sync_dir';
-$settings['hash_salt'] = 'y6J/jbR14XX8Mw1Z';
 
 $settings['trusted_host_patterns'] = array(
     '\.localhost$', '\.local$', '\.loc$'
@@ -792,7 +790,7 @@ $settings['trusted_host_patterns'] = array(
     'prefix' => '',
 ];
 
-$settings['config_sync_directory'] = '/mnt/files/config/sync_dir';
+$settings['config_sync_directory'] = '../config/sync';
 $settings['hash_salt'] = 'RijwIcpWqr3ocB1b';
 
 $settings['trusted_host_patterns'] = array(

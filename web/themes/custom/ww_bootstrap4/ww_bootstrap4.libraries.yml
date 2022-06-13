@@ -2,3 +2,7 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+      css/above_the_fold.min.css: {}
+      css/main.min.css: {}
+  js:
+    js/min/sliders.min.js: {}
