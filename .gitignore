@@ -12,8 +12,12 @@ web/modules/contrib
 web/themes/contrib
 
 # Ignore configuration files that may contain sensitive information.
-# sites/*/settings*.php
-# sites/*/services*.yml
+web/sites/*/settings*.php
+web/sites/*/services*.yml
+
+# Ignore paths that contain user-generated content.
+web/sites/*/files
+web/sites/*/private
 
 web/core
 web/.csslintrc
