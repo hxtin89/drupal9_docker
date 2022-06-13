@@ -6,3 +6,7 @@ global-styling:
       css/main.min.css: {}
   js:
     js/min/sliders.min.js: {}
+  woff:
+    assets/fonts/icon/wildicon.woff: {}
+  woff2:
+    assets/fonts/icon/wildicon.woff2: {}

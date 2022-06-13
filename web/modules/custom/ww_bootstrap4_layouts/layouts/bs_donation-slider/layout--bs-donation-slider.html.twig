@@ -1,99 +1,44 @@
 {% if content %}
-  <div{{ attributes }}>
+	<div{{attributes}}>
 
-    {% if content.content %}
-      <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
+		{% if content.content %}
+			<div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
 
-        <div
-        class="aw_container aw_cta_donation_slider_module aw_full_width pt96 pt_mobile_64 pb64 pb_mobile_80"
-      >
-        <div class="aw_row">
-          <div class="col_12">
-            <!-- A unique ID is nessary for each slider. Just use a random nuber as suffix-->
-            <div id="abw_donation_slider_01" class="splide aw_donation_slider">
-              <div class="splide__track">
-                <ul class="splide__list">
-				
-                  <li class="splide__slide bg_yellow no_color_change">
-                    <div class="aw_container">
-                      <div
-                        class="aw_row medium_no_gap pt48 pb64 pr64 pl64 pt_mobile_32 pb_mobile_40 pr_mobile_24 pl_mobile_24"
-                      >
-                        <div class="col_8 prime">
-                          <h3 class="mb16">
-                            Wir messen unseren Erfolg nicht in Euros. Sondern in
-                            Quadratmetern.
-                          </h3>
-                          <p class="mb32 aw_plarge aw_mobile_p">
-                            Sei Teil unserer Community und trage dazu bei, die
-                            Wildnis zu schützen. Werde jetzt Wildnispate.
-                          </p>
-                        </div>
-                        <div class="col_4 left v_bottom">
-                          <a class="aw_btn aw_special_green" href="#"
-                            >Jetzt spenden</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  
-				  <li class="splide__slide bg_yellow no_color_change">
-                    <div class="aw_container">
-                      <div
-                        class="aw_row medium_no_gap pt48 pb64 pr64 pl64 pt_mobile_32 pb_mobile_40 pr_mobile_24 pl_mobile_24"
-                      >
-                        <div class="col_8 prime">
-                          <h3 class="mb16">
-                            Wir messen unseren Erfolg nicht in Euros. Sondern in
-                            Fläche.
-                          </h3>
-                          <p class="mb32 aw_plarge aw_mobile_p">
-                            Sei Teil unserer Community und trage dazu bei, die
-                            Wildnis zu schützen. Werde jetzt Wildnispate.
-                          </p>
-                        </div>
-                        <div class="col_4 left v_bottom">
-                          <a class="aw_btn aw_special_green" href="#"
-                            >Jetzt spenden</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </li>
+				<div class="aw_container aw_cta_donation_slider_module aw_full_width pt96 pt_mobile_64 pb64 pb_mobile_80">
+					<div class="aw_row">
+						<div
+							class="col_12">
+							<!-- A unique ID is nessary for each slider. Just use a random nuber as suffix-->
+							<div id="abw_donation_slider_01" class="splide aw_donation_slider">
+								<div class="splide__track">
+									<ul class="splide__list">
 
-                  <li class="splide__slide bg_yellow no_color_change">
-                    <div class="aw_container">
-                      <div
-                        class="aw_row medium_no_gap pt48 pb64 pr64 pl64 pt_mobile_32 pb_mobile_40 pr_mobile_24 pl_mobile_24"
-                      >
-                        <div class="col_8 prime">
-                          <h3 class="mb16">
-                            Wir messen unseren Erfolg nicht in Euros. Sondern in
-                            Lebensräumen.
-                          </h3>
-                          <p class="mb32 aw_plarge aw_mobile_p">
-                            Sei Teil unserer Community und trage dazu bei, die
-                            Wildnis zu schützen. Werde jetzt Wildnispate.
-                          </p>
-                        </div>
-                        <div class="col_4 left v_bottom">
-                          <a class="aw_btn aw_special_green" href="#"
-                            >Jetzt spenden</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                
-				</ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+										{% for item in items %}
+											
+                      <li class="splide__slide bg_yellow no_color_change">
+											<div class="aw_container">
+												<div class="aw_row medium_no_gap pt48 pb64 pr64 pl64 pt_mobile_32 pb_mobile_40 pr_mobile_24 pl_mobile_24">
 
-    {% endif %}
+                          {{ item }}
+                          
+													<div class="col_4 left v_bottom">
+														<a class="aw_btn aw_special_green" href="#">Jetzt spenden</a>
+													</div>
+												</div>
+											</div>
+										</li>
 
-  </div>
-{% endif %}
+										{% endfor %}
+										
+
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			{% endif %}
+
+		</div>
+	{% endif %}
