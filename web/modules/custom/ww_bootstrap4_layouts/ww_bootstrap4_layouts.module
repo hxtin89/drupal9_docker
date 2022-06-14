@@ -19,7 +19,7 @@ function ww_bootstrap4_layouts_preprocess_layout__bs_donation_slider(&$variables
   function ww_bootstrap4_layouts_preprocess_layout__bs_gallery(&$variables) {
     if ($variables['content']['#entity'] instanceof \Drupal\block_content\Entity\BlockContent) {
       $block = $variables['content']['#entity'];
-  
+       
       if (!$block->get('field_gallery_items')->isEmpty()) {
         $gallery_items = $block->get('field_gallery_items')->referencedEntities();
         foreach ($gallery_items as $item) {
@@ -30,4 +30,23 @@ function ww_bootstrap4_layouts_preprocess_layout__bs_donation_slider(&$variables
   
       $variables['gallery_id'] = $block->id();
     }
+  }
+
+  function ww_bootstrap4_layouts_preprocess_layout__bs_gallery_title(&$variables) {
+    $entity = $variables['paragraph'];
+  
+    $variables['content']['field_gallery_title'] = check_markup(
+      $entity->get('field_gallery_title')->getValue()[0]['value'],
+      'basic_html',
+      $entity->language()->getId()
+    );
+  }
+  function ww_bootstrap4_layouts_preprocess_layout__bs_gallery_title_description(&$variables) {
+    $entity = $variables['paragraph'];
+  
+    $variables['content']['	field_gallery_title_description'] = check_markup(
+      $entity->get('	field_gallery_title_description')->getValue()[0]['value'],
+      'basic_html',
+      $entity->language()->getId()
+    );
   }

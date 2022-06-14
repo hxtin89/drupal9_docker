@@ -3,6 +3,16 @@
  {% if content.content %}
      <div class="aw_container aw_cta_project_slider_module aw_full_width pt96 pt_mobile_64 pb64 pb_mobile_80"
       >
+        <div
+          class="aw_row medium_row_no_gap aw_max_content_width pb48 pb_mobile_32"
+         >
+          <div class="col_6">
+            {{ content.field_gallery_title }}
+          </div>
+          <div class="col_6">
+            {{ content.field_gallery_title_description }}
+          </div>
+        </div>
         <div class="aw_row">
           <div class="col_12">
             <!-- A unique ID is nessary for each slider. Just use a random nuber as suffix-->
@@ -28,7 +38,6 @@
             </div>
           </div>
         </div>
-           {{ content.content|without('field_gallery_items') }}
       </div>
       {% endif %}
   </div>
