@@ -1,0 +1,35 @@
+{% if content %}
+  <div{{ attributes }}>
+ {% if content.content %}
+     <div class="aw_container aw_cta_project_slider_module aw_full_width pt96 pt_mobile_64 pb64 pb_mobile_80"
+      >
+        <div class="aw_row">
+          <div class="col_12">
+            <!-- A unique ID is nessary for each slider. Just use a random nuber as suffix-->
+            <div id="abw_project_slider_{{ gallery_id }}" 
+            class="splide aw_project_slider is-initialized splide--loop splide--ltr splide--draggable is-active">
+              <div class="splide__track" id="abw_project_slider_{{ gallery_id }}-track" style="padding-left: 6.90625rem; padding-right: 6.90625rem;">
+                <ul class="splide__list" 
+                id="abw_project_slider_{{ gallery_id }}-list" 
+                style="transform: translateX(-1886px);" 
+                data-ride="abw_project_slider">
+                  {% for item in items %}
+                    <li data-target="#abw_project_slider_{{ gallery_id }}"  
+                 
+                     class="splide__slide   is-active is-visible"  
+                    style="margin-right: 2rem; width: calc(((100% + 2rem) / 1) - 2rem);"
+                      id="abw_project_slider_{{ gallery_id }}-clone{{loop.index0}}"
+                    aria-hidden="true">
+                            {{ item }}
+                    </li>
+                  {% endfor %}
+                  </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+           {{ content.content|without('field_gallery_items') }}
+      </div>
+      {% endif %}
+  </div>
+{% endif %}

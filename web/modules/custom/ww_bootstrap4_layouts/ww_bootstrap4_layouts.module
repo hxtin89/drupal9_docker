@@ -15,3 +15,19 @@ function ww_bootstrap4_layouts_preprocess_layout__bs_donation_slider(&$variables
       $variables['donation_slider_id'] = $block->id();
     }
   }
+
+  function ww_bootstrap4_layouts_preprocess_layout__bs_gallery(&$variables) {
+    if ($variables['content']['#entity'] instanceof \Drupal\block_content\Entity\BlockContent) {
+      $block = $variables['content']['#entity'];
+  
+      if (!$block->get('field_gallery_items')->isEmpty()) {
+        $gallery_items = $block->get('field_gallery_items')->referencedEntities();
+        foreach ($gallery_items as $item) {
+          $view_builder = \Drupal::entityTypeManager()->getViewBuilder($item->getEntityTypeId());
+          $variables['items'][] = $view_builder->view($item);;
+        }
+      }
+  
+      $variables['gallery_id'] = $block->id();
+    }
+  }

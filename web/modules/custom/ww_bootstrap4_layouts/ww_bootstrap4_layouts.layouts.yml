@@ -9,3 +9,15 @@ bs_carousel:
   regions:
     content:
       label: Content
+
+bs_gallery:
+  label: 'BS gallery'
+  path: layouts/bs_gallery
+  template: layout--bs-gallery
+  category: 'WW Bootstrap4'
+  default_region: content
+  icon_map:
+    - [content]
+  regions:
+    content:
+      label: Content
