@@ -26,7 +26,7 @@ web/.csslintrc
 web/.eslintignore
 web/.eslintrc.json
 web/.ht.router.php
-web/*/.htaccess
+.htaccess
 web/INSTALL.txt
 web/README.md
 web/autoload.php
